@@ -1,0 +1,26 @@
+[project]
+name = "tablet-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Prateek Kumar", email = "prateekkum990@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "a2a-sdk[fastapi]>=1.1.2",
+    "mcp[cli]>=2.2.0",
+    "pydantic-settings>=2.15.0",
+    "shared",
+]
+
+[project.scripts]
+tablet-agent = "tablet_agent:main"
+tablet-tools-server = "mcp_server:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+shared = { workspace = true }
