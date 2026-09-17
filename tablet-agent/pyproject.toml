@@ -16,7 +16,7 @@ dependencies = [
 
 [project.scripts]
 tablet-agent = "tablet_agent:main"
-tablet-tools-server = "mcp_server:main"
+tablet-test = "tablet_agent_tests:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
